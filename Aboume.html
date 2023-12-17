@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Slick Playground</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Full-width input fields */
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: rgb(123, 30, 30);
+            color: white;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        /* Center the image and position the close button */
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 80%;
+            /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button (x) */
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: red;
+            cursor: pointer;
+        }
+
+        /* Add Zoom Animation */
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navigator">
+        <nav class="Navbar">
+            <a href="index.html">Trang Chủ</a>
+            <a href="chrismas.html">Giáng Sinh</a>
+            <a href="Aboume.html">Bản Thân</a>
+            <a href="Sanpham.html">Mua Sắm</a>
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Tư Vấn</button>
+        </nav>
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div id="id01" class="modal">
+
+            <form class="modal-content animate" action="/action_page.php" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <img src="https://i.pinimg.com/474x/32/d1/5c/32d15c468cd670a2cfac8c028ce35db5.jpg" alt="Avatar"
+                        class="avatar">
+                </div>
+
+                <div class="container">
+                    <label for="uname"><b>Họ Tên</b></label>
+                    <input type="text" placeholder="Họ Tên" name="uname" required>
+
+                    <label for="psw"><b>Gmail</b></label>
+                    <input type="password" placeholder="Gmail" name="psw" required>
+                    <p>Phản ánh</p>
+                    <textarea name="" id="Phản ánh" cols="120" rows="2"></textarea>
+                    <button type="submit">Gửi</button>
+                    <div class="container" style="background-color:#f1f1f1">
+                    </div>
+            </form>
+        </div>
+        </nav>
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+    </header>
+
+    <div class="img">
+        <img src="44117510cd43641d3d52.jpg" alt="">
+    </div>
+    <!-- About section -->
+    <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+        <h4><b>Về mình</b></h4>
+        <div class="w3-content w3-justify" style="max-width:600px">
+            <h4>Mình tên là Kiệt</h4>
+            <p>Mình tên đây đủ là Trịnh Tuấn Kiệt. Sinh ngày 24/2/2008 và hiện tại là 15 tuổi. Quê ở Hài Phòng. Hiện tại
+                mình đang học ở trường Trung Học Phổ Thông Phước Long quận 9. Đây là lần đầu tiên mình học bộ môn lập
+                trình và mình đã học bộ mon này được 3 tháng rưỡi. Mình cực kì thích bộ môn này và mình đã quyết định sẽ
+                gắn bó lâu dài với lĩnh vực ấy.
+            </p>
+            <p>mail:trinhtuankiet2402@gmail.com</p>
+            <p>tele: 0902502712</p>
+            <!-- Page Start -->
+            <div id="home" class="w3-content" style="max-width:1564px"></div>
+            <footer class="w3-container w3-padding-32 w3s-grey w3-center w3-xlarge">
+                <div class="w3-section">
+                    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                    <i class="fa fa-instagram w3-hover-opacity"></i>
+                    <i class="fa fa-snapchat w3-hover-opacity"></i>
+                    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                    <i class="fa fa-twitter w3-hover-opacity"></i>
+                    <i class="fa fa-linkedin w3-hover-opacity"></i>
+                </div>
+                <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
+                        class="w3-hover-text-green">Trịnh Tuấn Kiệt</a></p>
+            </footer>
+</body>
+
+</html>
